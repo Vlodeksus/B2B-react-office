@@ -1,0 +1,12 @@
+.page {
+    background-color: rgb(124, 178, 240);
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+.dialogsItems {
+    margin-left: 20px;
+}
+.messages {
+    margin-left: 20px;
+}

@@ -1,0 +1,15 @@
+.navTopWrapper {
+    border-bottom:  1px solid #737B80;
+    height: 63px;
+}
+.logo {
+    width: 133px;
+    height: 14px;
+    margin-top: 21px;
+    margin-left: 16px;
+}
+.arrows {
+    width: 16px;
+    height:  16px;
+    margin-left: 27px;
+}

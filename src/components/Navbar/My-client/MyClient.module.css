@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 16px;
+    border-bottom: 1px solid #737B80;
+}
+.gamburger {
+    width: 16px;
+    height: 14px;
+    margin-left: 84px;
+}
+.clientName {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+span {
+    color: #737B80;
+}
+.www {
+    color: #737B80;
+    font-weight: 700;
+}
+.avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
