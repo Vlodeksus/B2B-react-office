@@ -11,22 +11,33 @@ let initialState = {
 
 export const ProfileInfoReducer = (state = initialState, action) => {
     switch (action.type) {
-      case ADD_POST: 
+      case ADD_POST: {
         let newPost = {
           id: 6,
           message: state.newPostText,
           likesCount: 22,
         };
-        state.posts.push(newPost);
-        state.newPostText = "";
-        return state;
-      case UPDATE_NEW_POST_TEXT: 
-        state.newPostText = action.newText;
-        return state;
+        //Робимо копію state (ми не можемо змінювати об'єкт який до нас приходить)
+        let stateCopy = {...state};             //створюємо поверхневу копію
+        stateCopy.posts = [...state.posts];     //створюємо глибоку копію
+        stateCopy.posts.push(newPost);
+        stateCopy.newPostText = "";
+        // state.posts.push(newPost);
+        // state.newPostText = "";
+        //return state;
+        return stateCopy;
+      }
+      case UPDATE_NEW_POST_TEXT: {
+        let stateCopy = {...state}
+        stateCopy.newPostText = action.newText;
+        // state.newPostText = action.newText;
+        // return state; 
+        return stateCopy;
+      }
       default: 
         return state;
+      }
     }
-};
 
 export const addPostActionCreator = () => {
   return {

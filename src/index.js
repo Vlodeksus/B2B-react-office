@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
 // import {  updateNewPostText } from './components/Redux/state';
 
-let rerenderEntiredTree = (state) => {
+// let rerenderEntiredTree = (state) => {
   ReactDOM.render(
       <React.StrictMode>
       <BrowserRouter>
@@ -27,12 +27,12 @@ let rerenderEntiredTree = (state) => {
       </React.StrictMode>,
   document.getElementById('root')
       ); 
-};
+// };
 
 
-rerenderEntiredTree (store.getState());
+// rerenderEntiredTree (store.getState());
 
-store.subscribe(rerenderEntiredTree);
+// store.subscribe(rerenderEntiredTree);
 
 
 reportWebVitals();

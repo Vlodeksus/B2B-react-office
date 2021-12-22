@@ -55,12 +55,20 @@ let mapStateToProps = (state) => {
   }
 }
 let mapDispatchToProps = (dispatch) => {
+  // return {
+  //   updateNewMessageBody: () => {
+  //     dispatch(sendMessageCreator());
+  //   },
+  //   sendMessage: (body) => {
+  //     dispatch(updateNewMessageBodyCreator(body));
+  //   }
+  // }
   return {
-    updateNewMessageBody: () => {
-      dispatch(sendMessageCreator());
+    updateNewMessageBody: (body) => {
+      dispatch(updateNewMessageBodyCreator(body)); 
     },
-    sendMessage: (body) => {
-      dispatch(updateNewMessageBodyCreator(body));
+    sendMessage: () => {
+      dispatch(sendMessageCreator());
     }
   }
 }
