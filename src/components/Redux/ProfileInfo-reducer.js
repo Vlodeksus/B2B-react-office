@@ -18,21 +18,26 @@ export const ProfileInfoReducer = (state = initialState, action) => {
           likesCount: 22,
         };
         //Робимо копію state (ми не можемо змінювати об'єкт який до нас приходить)
-        let stateCopy = {...state};             //створюємо поверхневу копію
-        stateCopy.posts = [...state.posts];     //створюємо глибоку копію
-        stateCopy.posts.push(newPost);
-        stateCopy.newPostText = "";
+        return {...state,
+          posts: [...state.posts, newPost],
+          newPostText: "" 
+        };             
+        // stateCopy.posts = [...state.posts];     //створюємо глибоку копію
+        // stateCopy.posts.push(newPost);
+        // stateCopy.newPostText = "";
         // state.posts.push(newPost);
         // state.newPostText = "";
         //return state;
-        return stateCopy;
+        // return stateCopy;
       }
       case UPDATE_NEW_POST_TEXT: {
-        let stateCopy = {...state}
-        stateCopy.newPostText = action.newText;
+        return {...state,
+          newPostText: action.newText
+        }
+        // stateCopy.newPostText = action.newText;
         // state.newPostText = action.newText;
         // return state; 
-        return stateCopy;
+        // return stateCopy;
       }
       default: 
         return state;

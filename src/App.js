@@ -10,6 +10,7 @@ import Profile from "./components/Content/ContentInfo/ProfileInfo";
 import ProfileInfo from "./components/Content/ContentInfo/ProfileInfo";
 import ProfileInfoContainer from "./components/Content/ContentInfo/ProfileInfoContainer";
 import DialogsContainer from "./components/Content/Dialogs/DialogsContainer";
+import UsersContainer from "./components/Content/Users/UsersContainer";
 
 const App = (props) => {
 //   let posts = [
@@ -51,6 +52,7 @@ const App = (props) => {
               />
             }
           />
+          <Route path="/users" element={<UsersContainer />} />
         </Routes>
       </div>
     </div>

@@ -36,6 +36,11 @@ const NavMenu = (props) => {
                         <span>Повідомлення</span>
                     </NavLink>
                 </li>
+                <li>
+                <NavLink to='/users'>
+                        <span>Користувачі</span>
+                    </NavLink>
+                </li>
             </ul>
         </div>
     );
